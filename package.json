@@ -1,0 +1,64 @@
+{
+  "name": "@darkobits/import-unique",
+  "version": "0.0.0",
+  "description": "Import an un-cached version of a module.",
+  "license": "WTFPL",
+  "contributors": [
+    {
+      "name": "Joshua Martin",
+      "email": "joshua@frontlawn.net"
+    }
+  ],
+  "keywords": [
+    "import",
+    "require",
+    "cache",
+    "nocache"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkobits/import-unique.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/import-unique.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "xo",
+    "pretest": "npm run build",
+    "test": "node ./dist/import-unique.spec.js",
+    "prebuild": "run-p clean lint",
+    "build": "babel src --out-dir dist",
+    "build:watch": "npm run build -- --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "run-s lint build",
+    "prebump": "npm run prepublishOnly",
+    "bump": "standard-version",
+    "bump:beta": "standard-version --prerelease=beta"
+  },
+  "dependencies": {
+    "caller-path": "^2.0.0",
+    "resolve-from": "^4.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "npm-run-all": "^4.1.1",
+    "rimraf": "^2.6.2",
+    "standard-version": "^4.2.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "env": [
+      "node"
+    ],
+    "space": true,
+    "rules": {
+      "capitalized-comments": "off",
+      "import/no-unassigned-import": "off",
+      "no-multiple-empty-lines": "off"
+    }
+  }
+}
