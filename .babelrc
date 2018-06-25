@@ -1,9 +1,7 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "node": "6.0.0"
-      }
-    }]
+    "@babel/preset-env",
+    "@babel/preset-stage-3",
+    "@babel/preset-typescript"
   ]
 }
