@@ -1,16 +1,24 @@
-[![][npm-img]][npm-url] [![][travis-img]][travis-url] [![][david-img]][david-url] [![][david-dev-img]][david-dev-url] [![][cc-img]][cc-url] [![][xo-img]][xo-url]
-
-# import-unique
+<a href="#top" id="top">
+  <img src="https://user-images.githubusercontent.com/441546/41857985-986c12c0-784d-11e8-9e05-cb64ca41c70f.png" style="max-width: 100%">
+</a>
+<p align="center">
+  <a href="https://www.npmjs.com/package/@darkobits/import-unique"><img src="https://img.shields.io/npm/v/@darkobits/import-unique.svg?style=flat-square"></a>
+  <a href="https://travis-ci.org/darkobits/import-unique"><img src="https://img.shields.io/travis/darkobits/import-unique.svg?style=flat-square"></a>
+  <a href="https://david-dm.org/darkobits/import-unique"><img src="https://img.shields.io/david/darkobits/import-unique.svg?style=flat-square"></a>
+  <a href="https://www.codacy.com/app/darkobits/import-unique"><img src="https://img.shields.io/codacy/coverage/99618c780f75477d916ff4cd2265bb85.svg?style=flat-square"></a>
+  <a href="https://github.com/conventional-changelog/standard-version"><img src="https://img.shields.io/badge/conventional%20commits-1.0.0-027dc6.svg?style=flat-square"></a>
+  <a href="https://github.com/sindresorhus/xo"><img src="https://img.shields.io/badge/code_style-XO-e271a5.svg?style=flat-square"></a>
+</p>
 
 _(Yet another)_ "import and bypass Node's `require.cache`" package. This one, however, restores the cache to its prior state after fetching a unique copy of the provided module, making it unobtrusive.
 
-## Installation
+## Install
 
 ```bash
-$ npm install --save @darkobits/import-unique
+$ npm i @darkobits/import-unique
 ```
 
-## Usage
+## Use
 
 This package's default export is a function with the following signature:
 
@@ -18,8 +26,7 @@ This package's default export is a function with the following signature:
 |---|---|---|
 |`name`|`string`|Module name to import.|
 
-The function will temporarily remove the resolved module from Node's cache,
-`require()` it, restore the cached version, and return the unique version.
+The function will temporarily remove the resolved module from Node's cache, `require()` it, restore the cached version, and return the unique version.
 
 > `i-can-haz.js`
 
@@ -71,28 +78,10 @@ const canHaz = importUnique('./i-can-haz');
 console.log(canHaz()); // => true
 ```
 
-**N.B.** If there are other modules importing `i-can-haz` normally and, in fact, expect the shared mutable state behavior it uses, they may continue to do so. Modules that import the shared copy of `i-can-haz` _after_ a unique copy has been imported will continue to see the same shared copy of the module.
+**N.B.** If there are other modules importing `i-can-haz` normally and, in fact, expect the shared mutable state behavior it uses, they may continue to do so. Modules that import the shared copy of `i-can-haz` _after_ a unique copy has been imported will continue to get the same shared copy of the module. In this way, `import-unique` is completely unobtrusive.
 
 ## &nbsp;
 <p align="center">
   <br>
   <img width="22" height="22" src="https://cloud.githubusercontent.com/assets/441546/25318539/db2f4cf2-2845-11e7-8e10-ef97d91cd538.png">
 </p>
-
-[npm-img]: https://img.shields.io/npm/v/@darkobits/import-unique.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/@darkobits/import-unique
-
-[travis-img]: https://img.shields.io/travis/darkobits/import-unique.svg?style=flat-square
-[travis-url]: https://travis-ci.org/darkobits/import-unique
-
-[david-img]: https://img.shields.io/david/darkobits/import-unique.svg?style=flat-square
-[david-url]: https://david-dm.org/darkobits/import-unique
-
-[david-dev-img]: https://img.shields.io/david/dev/darkobits/import-unique.svg?style=flat-square
-[david-dev-url]: https://david-dm.org/darkobits/import-unique?type=dev
-
-[cc-img]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square
-[cc-url]: https://github.com/conventional-changelog/standard-version
-
-[xo-img]: https://img.shields.io/badge/code_style-XO-e271a5.svg?style=flat-square
-[xo-url]: https://github.com/sindresorhus/xo
