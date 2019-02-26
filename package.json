@@ -1,6 +1,6 @@
 {
   "name": "@darkobits/import-unique",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Import an un-cached version of a module.",
   "license": "WTFPL",
   "contributors": [
