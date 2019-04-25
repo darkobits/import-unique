@@ -22,9 +22,9 @@ $ npm i @darkobits/import-unique
 
 This package's default export is a function with the following signature:
 
-|Parameter|Type|Description|
-|---|---|---|
-|`name`|`string`|Module name to import.|
+```ts
+type importUnique = (module: string): any;
+```
 
 The function will temporarily remove the resolved module from Node's cache, `require()` it, restore the cached version, and return the unique version.
 
@@ -78,7 +78,7 @@ const canHaz = importUnique('./i-can-haz');
 console.log(canHaz()); // => true
 ```
 
-**N.B.** If there are other modules importing `i-can-haz` normally and, in fact, expect the shared mutable state behavior it uses, they may continue to do so. Modules that import the shared copy of `i-can-haz` _after_ a unique copy has been imported will continue to get the same shared copy of the module. In this way, `import-unique` is completely unobtrusive.
+**N.B.** If there are other modules importing `i-can-haz` normally and, in fact, expect the shared mutable state behavior it uses, they may continue to do so. Modules that import the shared copy of `i-can-haz` _after_ a unique copy has been imported will continue to get the same shared copy of the module. In this way, `import-unique` is completely unobtrusive and everyone can haz what they want.
 
 ## &nbsp;
 <p align="center">
