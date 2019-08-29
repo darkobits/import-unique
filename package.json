@@ -29,8 +29,8 @@
     "resolve-from": "^5.0.0"
   },
   "devDependencies": {
-    "@darkobits/ts-unified": "^1.6.0",
-    "@types/jest": "^24.0.13",
-    "@types/node": "^11.13.13"
+    "@darkobits/ts-unified": "^3.0.6",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.2"
   }
 }

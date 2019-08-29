@@ -3,8 +3,8 @@ import importUnique from './import-unique';
 
 describe('import-unique', () => {
   it('should import a unique copy of the module', () => {
-    const instanceA = require('../mocks/singleton-module').default; // tslint:disable-line no-require-imports
-    const instanceB = require('../mocks/singleton-module').default; // tslint:disable-line no-require-imports
+    const instanceA = require('../mocks/singleton-module'); // tslint:disable-line no-require-imports
+    const instanceB = require('../mocks/singleton-module'); // tslint:disable-line no-require-imports
 
     // Create two variables to hold the results of incrementing the counter.
     let counterA;
@@ -21,7 +21,7 @@ describe('import-unique', () => {
     jest.resetModules();
 
     // Now, import a unique copy of the same module.
-    const instanceC = importUnique('../mocks/singleton-module').default;
+    const instanceC = importUnique('../mocks/singleton-module');
 
     // Increment the counter.
     const counterC = instanceC();
