@@ -25,7 +25,7 @@
     "prepare": "nps prepare"
   },
   "dependencies": {
-    "caller-path": "^2.0.0",
+    "caller-path": "^3.0.0",
     "resolve-from": "^5.0.0"
   },
   "devDependencies": {
