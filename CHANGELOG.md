@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.6](https://github.com/darkobits/import-unique/compare/v1.0.5...v1.0.6) (2020-12-16)
+
+
+### 🏗 Chores
+
+* Update dependencies. ([4960160](https://github.com/darkobits/import-unique/commit/4960160a9aac194d53733c0d97ba47b01020f5b9))
+
+
+### 📖 Documentation
+
+* Update README. ([e8a427d](https://github.com/darkobits/import-unique/commit/e8a427deb4cbb84378dc670d7cbf2a113196ef9c))
+
 ### [1.0.5](https://github.com/darkobits/import-unique/compare/v1.0.4...v1.0.5) (2019-08-29)
 
 ## [1.0.4](https://github.com/darkobits/import-unique/compare/v1.0.3...v1.0.4) (2019-04-25)
