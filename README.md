@@ -1,12 +1,12 @@
 <a href="#top" id="top">
-  <img src="https://user-images.githubusercontent.com/441546/41857985-986c12c0-784d-11e8-9e05-cb64ca41c70f.png" style="max-width: 100%">
+  <img src="https://user-images.githubusercontent.com/441546/102332676-42bc6880-3f41-11eb-813d-2f8d70bbbf32.png" style="max-width: 100%">
 </a>
 <p align="center">
   <a href="https://www.npmjs.com/package/@darkobits/import-unique"><img src="https://img.shields.io/npm/v/@darkobits/import-unique.svg?style=flat-square"></a>
-  <a href="https://github.com/darkobits/import-unique/actions"><img src="https://img.shields.io/endpoint?url=https://aws.frontlawn.net/ga-shields/darkobits/import-unique&style=flat-square"></a>
+  <a href="https://travis-ci.com/github/darkobits/import-unique"><img src="https://img.shields.io/travis/darkobits/import-unique.svg?style=flat-square"></a>
   <a href="https://david-dm.org/darkobits/import-unique"><img src="https://img.shields.io/david/darkobits/import-unique.svg?style=flat-square"></a>
   <a href="https://www.codacy.com/app/darkobits/import-unique"><img src="https://img.shields.io/codacy/coverage/99618c780f75477d916ff4cd2265bb85.svg?style=flat-square"></a>
-  <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/conventional%20commits-1.0.0-FB5E85.svg?style=flat-square"></a>
+  <a href="https://github.com/conventional-changelog/standard-version"><img src="https://img.shields.io/badge/conventional%20commits-1.0.0-027dc6.svg?style=flat-square"></a>
 </p>
 
 _(Yet another)_ "import and bypass Node's `require.cache`" package. This one, however, restores the cache to its prior state after fetching a unique copy of the provided module, making it unobtrusive.
@@ -79,8 +79,6 @@ console.log(canHaz()); // => true
 
 **N.B.** If there are other modules importing `i-can-haz` normally and, in fact, expect the shared mutable state behavior it uses, they may continue to do so. Modules that import the shared copy of `i-can-haz` _after_ a unique copy has been imported will continue to get the same shared copy of the module. In this way, `import-unique` is completely unobtrusive and everyone can haz what they want.
 
-## &nbsp;
-<p align="center">
-  <br>
-  <img width="22" height="22" src="https://cloud.githubusercontent.com/assets/441546/25318539/db2f4cf2-2845-11e7-8e10-ef97d91cd538.png">
-</p>
+<a href="#top">
+  <img src="https://user-images.githubusercontent.com/441546/102322726-5e6d4200-3f34-11eb-89f2-c31624ab7488.png" style="max-width: 100%;">
+</a>
