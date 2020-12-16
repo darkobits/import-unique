@@ -27,6 +27,7 @@ export default function importUnique(name: string): any {
   Reflect.deleteProperty(require.cache, key);
 
   // Load an un-cached copy of the named module.
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const unique = require(key);
 
   // Replace the cached copy of the module.

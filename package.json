@@ -7,8 +7,7 @@
   "keywords": [
     "import",
     "require",
-    "cache",
-    "nocache"
+    "cache"
   ],
   "repository": {
     "type": "git",
@@ -19,18 +18,13 @@
   ],
   "main": "./dist/import-unique.js",
   "scripts": {
-    "build": "nps build",
-    "test": "nps test",
-    "bump": "nps bump",
     "prepare": "nps prepare"
   },
   "dependencies": {
-    "caller-path": "^2.0.0",
+    "caller-path": "^3.0.0",
     "resolve-from": "^5.0.0"
   },
   "devDependencies": {
-    "@darkobits/ts-unified": "^3.0.6",
-    "@types/jest": "^24.0.18",
-    "@types/node": "^12.7.2"
+    "@darkobits/ts": "^0.2.0"
   }
 }

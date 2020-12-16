@@ -3,8 +3,8 @@ import importUnique from './import-unique';
 
 describe('import-unique', () => {
   it('should import a unique copy of the module', () => {
-    const instanceA = require('../mocks/singleton-module'); // tslint:disable-line no-require-imports
-    const instanceB = require('../mocks/singleton-module'); // tslint:disable-line no-require-imports
+    const instanceA = require('../mocks/singleton-module');
+    const instanceB = require('../mocks/singleton-module');
 
     // Create two variables to hold the results of incrementing the counter.
     let counterA;
