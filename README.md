@@ -3,9 +3,9 @@
 </a>
 <p align="center">
   <a href="https://www.npmjs.com/package/@darkobits/import-unique"><img src="https://img.shields.io/npm/v/@darkobits/import-unique.svg?style=flat-square"></a>
-  <a href="https://travis-ci.com/github/darkobits/import-unique"><img src="https://img.shields.io/travis/darkobits/import-unique.svg?style=flat-square"></a>
+  <a href="https://github.com/darkobits/import-unique/actions?query=workflow%3ACI"><img src="https://img.shields.io/github/workflow/status/darkobits/import-unique/CI/master?style=flat-square"></a>
+  <a href="https://app.codecov.io/gh/darkobits/import-unique/branch/master"><img src="https://img.shields.io/codecov/c/github/darkobits/import-unique/master?style=flat-square"></a>
   <a href="https://david-dm.org/darkobits/import-unique"><img src="https://img.shields.io/david/darkobits/import-unique.svg?style=flat-square"></a>
-  <a href="https://www.codacy.com/app/darkobits/import-unique"><img src="https://img.shields.io/codacy/coverage/99618c780f75477d916ff4cd2265bb85.svg?style=flat-square"></a>
   <a href="https://github.com/conventional-changelog/standard-version"><img src="https://img.shields.io/badge/conventional%20commits-1.0.0-027dc6.svg?style=flat-square"></a>
 </p>
 
@@ -79,6 +79,7 @@ console.log(canHaz()); // => true
 
 **N.B.** If there are other modules importing `i-can-haz` normally and, in fact, expect the shared mutable state behavior it uses, they may continue to do so. Modules that import the shared copy of `i-can-haz` _after_ a unique copy has been imported will continue to get the same shared copy of the module. In this way, `import-unique` is completely unobtrusive and everyone can haz what they want.
 
+<br />
 <a href="#top">
   <img src="https://user-images.githubusercontent.com/441546/102322726-5e6d4200-3f34-11eb-89f2-c31624ab7488.png" style="max-width: 100%;">
 </a>
